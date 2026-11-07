@@ -22,9 +22,9 @@ export default function Footer() {
           <div className="md:col-span-5">
             <div className="flex items-center gap-3.5 mb-4">
               <img
-                src="/brand-logo.jpg"
+                src="/brand-logo.svg"
                 alt="Emblema Industrias Kisser"
-                className="w-12 h-12 rounded-lg border border-[#3E423E] object-cover shrink-0"
+                className="w-12 h-12 rounded-lg border border-[#3E423E] object-contain shrink-0"
               />
               <div>
                 <span className="block font-display text-2xl font-extrabold uppercase tracking-wide text-[#F3F1EA] leading-none">

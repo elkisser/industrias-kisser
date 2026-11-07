@@ -140,6 +140,8 @@ export default function CatalogSection({
                         <img
                           src={activeImg}
                           alt={product.name}
+                          loading="lazy"
+                          decoding="async"
                           className="w-full h-full object-cover"
                         />
                       </div>
@@ -165,7 +167,7 @@ export default function CatalogSection({
                                     [product.id]: photoUrl,
                                   }))
                                 }
-                                className={`w-11 h-8 rounded overflow-hidden border transition ${
+                                className={`min-w-[44px] min-h-[34px] w-11 h-8 rounded overflow-hidden border transition ${
                                   activeImg === photoUrl
                                     ? "border-[#181A18] ring-2 ring-[#146B38]"
                                     : "border-[#CEC9BC] opacity-70 hover:opacity-100"
@@ -175,6 +177,8 @@ export default function CatalogSection({
                                 <img
                                   src={photoUrl}
                                   alt={`${product.shortTitle} vista ${gIdx + 1}`}
+                                  loading="lazy"
+                                  decoding="async"
                                   className="w-full h-full object-cover"
                                 />
                               </button>
@@ -306,6 +310,8 @@ export default function CatalogSection({
                         <img
                           src={activeSpecPhoto}
                           alt={spec.title}
+                          loading="lazy"
+                          decoding="async"
                           className="w-full h-full object-cover"
                         />
                       </div>
@@ -326,7 +332,7 @@ export default function CatalogSection({
                                     [spec.id]: ph,
                                   }))
                                 }
-                                className={`w-10 h-7 rounded overflow-hidden border transition ${
+                                className={`min-w-[44px] min-h-[34px] w-11 h-8 rounded overflow-hidden border transition ${
                                   activeSpecPhoto === ph
                                     ? "border-[#181A18] ring-2 ring-[#146B38]"
                                     : "border-[#CEC9BC] opacity-70 hover:opacity-100"
@@ -336,6 +342,8 @@ export default function CatalogSection({
                                 <img
                                   src={ph}
                                   alt={`${spec.title} ${idx + 1}`}
+                                  loading="lazy"
+                                  decoding="async"
                                   className="w-full h-full object-cover"
                                 />
                               </button>
@@ -575,6 +583,8 @@ export default function CatalogSection({
                 <img
                   src="/local-kisser.jpg"
                   alt="Local comercial y oficinas de Industrias Kisser en Hasenkamp, Entre Ríos"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-64 sm:h-80 object-cover"
                 />
                 <div className="p-3.5 bg-[#F3F1EA] border-t border-[#CEC9BC] text-xs sm:text-sm text-[#434642]">
@@ -590,6 +600,8 @@ export default function CatalogSection({
                   <img
                     src="/instagram/post-2.jpg?v=2"
                     alt="Trabajo metalúrgico y oficio familiar en la planta de Industrias Kisser"
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-60 object-cover object-top"
                   />
                   <div className="p-3 bg-[#F3F1EA] border-t border-[#CEC9BC] text-xs text-[#434642]">
@@ -604,6 +616,8 @@ export default function CatalogSection({
                   <img
                     src="/muestras/PHOTO-2026-11-06-22-32-47_1.jpg"
                     alt="Línea de Palas Cargadoras Frontales frente al emblema de Industrias Kisser"
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-60 object-cover"
                   />
                   <div className="p-3 bg-[#F3F1EA] border-t border-[#CEC9BC] text-xs text-[#434642]">

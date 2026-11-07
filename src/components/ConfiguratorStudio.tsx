@@ -300,6 +300,8 @@ export default function ConfiguratorStudio({
                   <img
                     src={prod.instagramPhoto}
                     alt={prod.shortTitle}
+                    loading="lazy"
+                    decoding="async"
                     className="w-16 h-16 rounded-lg object-cover border border-[#CEC9BC] shrink-0"
                   />
                   <div className="min-w-0 flex-1">

@@ -73,9 +73,9 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-2.5 sm:gap-3">
         <a href="#" className="flex items-center gap-2.5 sm:gap-3 min-w-0">
           <img
-            src="/brand-logo.jpg"
+            src="/brand-logo.svg"
             alt="Emblema Oficial Industrias Kisser"
-            className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg border border-[#CEC9BC] object-cover shrink-0"
+            className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg border border-[#CEC9BC] object-contain shrink-0"
           />
           <div className="min-w-0">
             <span className="block font-display text-lg sm:text-[28px] font-extrabold tracking-[-0.02em] text-[#181A18] leading-none uppercase truncate">

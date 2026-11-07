@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import {
   Barlow_Condensed,
   Plus_Jakarta_Sans,
@@ -27,10 +27,60 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  (process.env.VERCEL_PROJECT_PRODUCTION_URL
+    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+    : "http://localhost:3000");
+
+const siteTitle =
+  "Industrias Kisser | Fábrica de Maquinarias Agrícolas — Hasenkamp, Entre Ríos";
+const siteDescription =
+  "Venta directa de fábrica: tolvas autodescargables, jaulas ganaderas, palas cargadoras frontales, rastras Rome tijera, volcadores, niveladoras, cisternas y bateas. Configurá y cotizá tu equipo en 3D.";
+
 export const metadata: Metadata = {
-  title: "Industrias Kisser | Fábrica de Maquinarias Agrícolas — Hasenkamp, Entre Ríos",
-  description:
-    "Fábrica de acoplados jaula para hacienda, rastras Rome tijera de 18 platos, palas cargadoras frontales y tolvas en Hasenkamp, Entre Ríos. Configurá los colores en 3D.",
+  metadataBase: new URL(siteUrl),
+  title: siteTitle,
+  description: siteDescription,
+  applicationName: "Industrias Kisser",
+  keywords: [
+    "Industrias Kisser",
+    "maquinaria agrícola",
+    "Hasenkamp",
+    "Entre Ríos",
+    "tolva autodescargable",
+    "jaula ganadera",
+    "pala cargadora frontal",
+    "rastra Rome tijera",
+    "acoplado volcador",
+    "tanque cisterna",
+  ],
+  openGraph: {
+    type: "website",
+    locale: "es_AR",
+    url: "/",
+    siteName: "Industrias Kisser",
+    title: "Industrias Kisser — Venta Directa de Fábrica",
+    description: siteDescription,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Industrias Kisser — Venta Directa de Fábrica",
+    description: siteDescription,
+  },
+  appleWebApp: {
+    title: "Kisser",
+    statusBarStyle: "black-translucent",
+  },
+  formatDetection: {
+    telephone: true,
+  },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#181A18",
 };
 
 export default function RootLayout({

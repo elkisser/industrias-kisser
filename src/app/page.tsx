@@ -119,7 +119,7 @@ export default function HomePage() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
               {/* Columna de Venta Directa y Propuesta de Valor */}
               <div className="lg:col-span-6">
-                <h1 className="font-display text-5xl sm:text-6xl lg:text-[66px] font-extrabold uppercase tracking-[-0.03em] text-[#F3F1EA] leading-[0.96]">
+                <h1 className="font-display text-4xl sm:text-6xl lg:text-[66px] font-extrabold uppercase tracking-[-0.03em] text-[#F3F1EA] leading-[0.96]">
                   Equipos que Rinden en el Campo.{" "}
                   <span className="text-[#DF9F14]">
                     Venta Directa de Fábrica.
@@ -267,7 +267,7 @@ export default function HomePage() {
                   </div>
 
                   {/* Pie Comercial de la Vitrina con Altura Fija para que nunca salte el layout */}
-                  <div className="p-4 sm:px-5 sm:py-4 h-[156px] sm:h-[116px] bg-[#222522] border-t border-[#3A3D39] flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                  <div className="p-4 sm:px-5 sm:py-4 min-h-[156px] sm:h-[116px] bg-[#222522] border-t border-[#3A3D39] flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                     <div className="min-w-0 flex-1">
                       <h2 className="font-display text-2xl sm:text-3xl font-extrabold uppercase text-white leading-none truncate">
                         {currentHeroItem.title}
