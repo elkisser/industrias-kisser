@@ -209,33 +209,29 @@ export default function ConfiguratorStudio({
   };
 
   const buildOrderMessage = () => {
+    const formattedMeasure = `${variantValue.toLocaleString("es-AR")} ${currentProduct.variantFilter.unit}`;
     const lines = [
-      `Hola Industrias Kisser, les escribo desde el Configurador 3D de la web para cotizar el siguiente equipo:`,
+      `Buen día. Solicito presupuesto del siguiente equipo:`,
       ``,
-      `EQUIPO: ${currentProduct.name}`,
-      `MEDIDA / CAPACIDAD ELEGIDA: ${getActiveVariantDescription()}`,
-      ``,
-      `COLORES SELECCIONADOS:`,
-      `- ${currentProduct.partLabels.body}: ${getColorLabel(bodyColor)}`,
-      `- ${currentProduct.partLabels.details}: ${getColorLabel(detailsColor)}`,
-      `- ${currentProduct.partLabels.rims}: ${getColorLabel(rimsColor)}`,
-      `- Terminación de pintura: ${finishNameMap[finishType]}`,
+      `Equipo: ${currentProduct.shortTitle}`,
+      `Capacidad / medida: ${formattedMeasure}`,
+      `Color cuerpo: ${getColorLabel(bodyColor)}`,
+      `Color detalles: ${getColorLabel(detailsColor)}`,
+      `Color llantas: ${getColorLabel(rimsColor)}`,
+      `Terminación: ${finishNameMap[finishType]}`,
     ];
 
     if (clientName.trim()) {
-      lines.push(``, `Nombre / Establecimiento: ${clientName.trim()}`);
+      lines.push(`Nombre: ${clientName.trim()}`);
     }
     if (clientLocation.trim()) {
-      lines.push(`Localidad / Provincia: ${clientLocation.trim()}`);
+      lines.push(`Localidad: ${clientLocation.trim()}`);
     }
     if (clientNotes.trim()) {
-      lines.push(`Observaciones: ${clientNotes.trim()}`);
+      lines.push(`Consulta: ${clientNotes.trim()}`);
     }
 
-    lines.push(
-      ``,
-      `Quedo atento a disponibilidad, plazo de fabricación y presupuesto. Muchas gracias.`
-    );
+    lines.push(``, `Muchas gracias.`);
     return lines.join("\n");
   };
 

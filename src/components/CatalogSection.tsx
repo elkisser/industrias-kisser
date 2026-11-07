@@ -50,23 +50,20 @@ export default function CatalogSection({
 
   const handleSendCustomProjectWhatsApp = () => {
     const lines = [
-      `Hola Industrias Kisser, les escribo desde la web para consultar por un trabajo / equipo a medida que no está en el catálogo estándar:`,
+      `Buen día. Consulto por un trabajo a medida:`,
       ``,
-      `TIPO DE TRABAJO: ${customTopic}`,
+      `Tipo de trabajo: ${customTopic}`,
     ];
     if (customDescription.trim()) {
-      lines.push(`DETALLE DE LO QUE NECESITO: ${customDescription.trim()}`);
+      lines.push(`Detalle: ${customDescription.trim()}`);
     }
     if (customName.trim()) {
-      lines.push(`Nombre / Establecimiento: ${customName.trim()}`);
+      lines.push(`Nombre: ${customName.trim()}`);
     }
     if (customLocation.trim()) {
       lines.push(`Localidad: ${customLocation.trim()}`);
     }
-    lines.push(
-      ``,
-      `Quedo atento para comentarlo o enviarles medidas/fotos. Muchas gracias.`
-    );
+    lines.push(``, `Muchas gracias.`);
     const url = `https://wa.me/${COMPANY_INFO.whatsappNumber}?text=${encodeURIComponent(
       lines.join("\n")
     )}`;
@@ -361,7 +358,7 @@ export default function CatalogSection({
                       </span>
                       <a
                         href={`https://wa.me/${COMPANY_INFO.whatsappNumber}?text=${encodeURIComponent(
-                          `Hola Industrias Kisser, quiero consultar por: ${spec.title}`
+                          `Buen día. Consulto por: ${spec.title}. Muchas gracias.`
                         )}`}
                         target="_blank"
                         rel="noopener noreferrer"

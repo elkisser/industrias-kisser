@@ -105,7 +105,7 @@ export default function HomePage() {
   const commercialWhatsAppUrl = `https://wa.me/${
     COMPANY_INFO.whatsappNumber
   }?text=${encodeURIComponent(
-    "Hola Industrias Kisser, vi su web y quiero recibir asesoramiento comercial y lista de precios de sus equipos."
+    "Buen día. Solicito lista de precios de sus equipos. Muchas gracias."
   )}`;
 
   return (
