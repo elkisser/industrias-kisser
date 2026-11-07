@@ -1,0 +1,22 @@
+# Dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# Next.js build output
+/.next/
+/out/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Local agent / editor folders
+/.agent/
+/.codex/
+/.gemini/
+/img/
+
+# Environment & OS files
+.env*
+.DS_Store
+Thumbs.db
