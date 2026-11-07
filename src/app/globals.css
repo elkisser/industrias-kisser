@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-canvas: #F3F1EA;
+  --bg-surface: #E7E4DA;
+  --border-hairline: #CEC9BC;
+  --ink-primary: #181A18;
+  --ink-secondary: #434642;
+  --ink-muted: #5F635D;
+  --kisser-green: #146B38;
+  --kisser-red: #9E1B22;
+}
+
+html {
+  background-color: var(--bg-canvas);
+  color: var(--ink-primary);
+  caret-color: var(--kisser-green);
+  text-underline-offset: 0.22em;
+}
+
+body {
+  background-color: var(--bg-canvas);
+  color: var(--ink-primary);
+  font-family: var(--font-sans), sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Impeccable rule: browser surfaces themed from the palette */
+::selection {
+  background-color: #146B38;
+  color: #F3F1EA;
+}
+
+:focus-visible {
+  outline: 2px solid #146B38;
+  outline-offset: 2px;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #E7E4DA;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #8E8A7E;
+  border: 2px solid #E7E4DA;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #146B38;
+}
+
+@keyframes kisser-contact-carousel {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-contact-carousel {
+  display: flex;
+  width: max-content;
+  animation: kisser-contact-carousel 22s linear infinite;
+}
+
+.animate-contact-carousel:hover,
+.animate-contact-carousel:focus-within {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-contact-carousel {
+    animation: none;
+  }
+}
