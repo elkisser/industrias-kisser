@@ -1,0 +1,166 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 380" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#141614" />
+      <stop offset="55%" stop-color="#1C201C" />
+      <stop offset="100%" stop-color="#121412" />
+    </linearGradient>
+
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#DF9F14" />
+      <stop offset="50%" stop-color="#F7C948" />
+      <stop offset="100%" stop-color="#DF9F14" />
+    </linearGradient>
+
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#146B38" />
+      <stop offset="100%" stop-color="#1E8E4C" />
+    </linearGradient>
+
+    <pattern id="gridPattern" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#2A2E2A" stroke-width="1" opacity="0.55" />
+    </pattern>
+
+    <style>
+      .gear-spin {
+        transform-origin: 150px 190px;
+        animation: rotateGear 18s linear infinite;
+      }
+      .stripe-draw {
+        stroke-dasharray: 420;
+        stroke-dashoffset: 420;
+        animation: drawStripe 3.6s cubic-bezier(0.22, 1, 0.36, 1) forwards infinite alternate;
+      }
+      .stripe-draw-2 {
+        stroke-dasharray: 420;
+        stroke-dashoffset: 420;
+        animation: drawStripe 3.6s 0.25s cubic-bezier(0.22, 1, 0.36, 1) forwards infinite alternate;
+      }
+      .stripe-draw-3 {
+        stroke-dasharray: 420;
+        stroke-dashoffset: 420;
+        animation: drawStripe 3.6s 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards infinite alternate;
+      }
+      .pulse-dot {
+        animation: pulseGlow 2.2s ease-in-out infinite;
+      }
+      .badge-float {
+        animation: floatBadge 4s ease-in-out infinite;
+      }
+      .title-text {
+        font-family: 'Arial Black', Impact, system-ui, sans-serif;
+        font-weight: 900;
+        letter-spacing: -1px;
+        fill: #F3F1EA;
+      }
+      .sub-text {
+        font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+        font-weight: 700;
+        fill: #CEC9BC;
+      }
+      .mono-tag {
+        font-family: 'Courier New', Consolas, monospace;
+        font-weight: 800;
+        letter-spacing: 2px;
+      }
+      @keyframes rotateGear {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+      @keyframes drawStripe {
+        0% { stroke-dashoffset: 420; opacity: 0.35; }
+        45%, 100% { stroke-dashoffset: 0; opacity: 1; }
+      }
+      @keyframes pulseGlow {
+        0%, 100% { opacity: 1; r: 6px; }
+        50% { opacity: 0.35; r: 8px; }
+      }
+      @keyframes floatBadge {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-4px); }
+      }
+    </style>
+  </defs>
+
+  <!-- Fondo Industrial con Grilla Técnica -->
+  <rect width="1200" height="380" rx="20" fill="url(#bgGrad)" stroke="#3A3D39" stroke-width="2" />
+  <rect width="1200" height="380" rx="20" fill="url(#gridPattern)" />
+
+  <!-- Barra Superior Dorada y Verde Kisser -->
+  <rect x="0" y="0" width="1200" height="8" fill="url(#goldGrad)" />
+  <rect x="0" y="372" width="1200" height="8" fill="url(#greenGrad)" />
+
+  <!-- Engranaje Oficial Kisser 360° Animado (12 Dientes) -->
+  <g class="gear-spin">
+    <circle cx="150" cy="190" r="64" fill="none" stroke="url(#goldGrad)" stroke-width="22" />
+    <circle cx="150" cy="190" r="34" fill="none" stroke="#146B38" stroke-width="4" />
+    <g fill="url(#goldGrad)">
+      <rect x="138" y="98" width="24" height="22" rx="3" transform="rotate(0 150 190)" />
+      <rect x="138" y="98" width="24" height="22" rx="3" transform="rotate(30 150 190)" />
+      <rect x="138" y="98" width="24" height="22" rx="3" transform="rotate(60 150 190)" />
+      <rect x="138" y="98" width="24" height="22" rx="3" transform="rotate(90 150 190)" />
+      <rect x="138" y="98" width="24" height="22" rx="3" transform="rotate(120 150 190)" />
+      <rect x="138" y="98" width="24" height="22" rx="3" transform="rotate(150 150 190)" />
+      <rect x="138" y="98" width="24" height="22" rx="3" transform="rotate(180 150 190)" />
+      <rect x="138" y="98" width="24" height="22" rx="3" transform="rotate(210 150 190)" />
+      <rect x="138" y="98" width="24" height="22" rx="3" transform="rotate(240 150 190)" />
+      <rect x="138" y="98" width="24" height="22" rx="3" transform="rotate(270 150 190)" />
+      <rect x="138" y="98" width="24" height="22" rx="3" transform="rotate(300 150 190)" />
+      <rect x="138" y="98" width="24" height="22" rx="3" transform="rotate(330 150 190)" />
+    </g>
+  </g>
+
+  <!-- Escarapela Argentina Central dentro del Engranaje -->
+  <circle cx="150" cy="190" r="22" fill="#38BDF8" />
+  <circle cx="150" cy="190" r="14" fill="#FFFFFF" />
+  <circle cx="150" cy="190" r="7" fill="#38BDF8" />
+
+  <!-- Pastilla de Ubicación y Estado en Vivo -->
+  <g transform="translate(275, 52)">
+    <rect x="0" y="0" width="490" height="34" rx="8" fill="#232723" stroke="#3E443E" stroke-width="1.5" />
+    <circle cx="22" cy="17" r="6" fill="#22C55E" class="pulse-dot" />
+    <text x="40" y="22" class="mono-tag" font-size="13" fill="#F3F1EA">
+      HASENKAMP, ENTRE RÍOS • INDUSTRIA ARGENTINA
+    </text>
+  </g>
+
+  <!-- Título Principal de Marca -->
+  <text x="275" y="162" class="title-text" font-size="68">
+    INDUSTRIAS KISSER
+  </text>
+
+  <!-- Triple Franja Curva Oficial Animada -->
+  <g transform="translate(275, 178)" fill="none" stroke="url(#goldGrad)" stroke-width="6" stroke-linecap="round">
+    <path class="stripe-draw" d="M 0 8 L 320 8 Q 370 8 395 36" />
+    <path class="stripe-draw-2" d="M 0 22 L 305 22 Q 355 22 378 46" />
+    <path class="stripe-draw-3" d="M 0 36 L 290 36 Q 340 36 360 56" />
+  </g>
+
+  <!-- Subtítulo Comercial -->
+  <text x="275" y="268" class="sub-text" font-size="22">
+    Vitrina Comercial Interactiva &amp; Configurador Paramétrico de Maquinaria en 3D
+  </text>
+
+  <!-- Tarjetas Flotantes de Capacidades Dinámicas -->
+  <g transform="translate(275, 294)" class="badge-float">
+    <rect x="0" y="0" width="195" height="44" rx="10" fill="#146B38" stroke="#1E8E4C" stroke-width="1.5" />
+    <text x="97" y="27" text-anchor="middle" class="sub-text" font-size="15" fill="#F3F1EA">
+      8 Equipos 3D en Vivo
+    </text>
+
+    <rect x="210" y="0" width="235" height="44" rx="10" fill="#232723" stroke="#DF9F14" stroke-width="1.5" />
+    <text x="327" y="27" text-anchor="middle" class="sub-text" font-size="15" fill="#DF9F14">
+      Medidas y Calcos Dinámicas
+    </text>
+
+    <rect x="460" y="0" width="230" height="44" rx="10" fill="#232723" stroke="#3E443E" stroke-width="1.5" />
+    <text x="575" y="27" text-anchor="middle" class="sub-text" font-size="15" fill="#F3F1EA">
+      10 Esmaltes RAL de Planta
+    </text>
+
+    <rect x="705" y="0" width="190" height="44" rx="10" fill="#232723" stroke="#3E443E" stroke-width="1.5" />
+    <text x="800" y="27" text-anchor="middle" class="sub-text" font-size="15" fill="#22C55E">
+      Cotización WhatsApp
+    </text>
+  </g>
+</svg>

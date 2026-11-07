@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" width="100%" height="100%">
+  <defs>
+    <style>
+      .panel-title {
+        font-family: 'Arial Black', Impact, system-ui, sans-serif;
+        font-weight: 900;
+        fill: #F3F1EA;
+      }
+      .panel-sub {
+        font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+        font-weight: 700;
+        fill: #CEC9BC;
+      }
+      .mono {
+        font-family: 'Courier New', Consolas, monospace;
+        font-weight: 800;
+      }
+      .color-cycle-body {
+        animation: cycleBodyColor 12s infinite;
+      }
+      .color-cycle-rim {
+        animation: cycleRimColor 12s infinite;
+      }
+      .slider-thumb {
+        animation: slideCapacity 8s ease-in-out infinite alternate;
+      }
+      .slider-fill {
+        animation: fillCapacity 8s ease-in-out infinite alternate;
+      }
+      @keyframes cycleBodyColor {
+        0%, 22% { fill: #1B6B2F; }
+        25%, 47% { fill: #B81D24; }
+        50%, 72% { fill: #EAB308; }
+        75%, 97% { fill: #1E5AA8; }
+        100% { fill: #1B6B2F; }
+      }
+      @keyframes cycleRimColor {
+        0%, 22% { fill: #EAB308; }
+        25%, 47% { fill: #F4F4F0; }
+        50%, 72% { fill: #2B3036; }
+        75%, 97% { fill: #F4F4F0; }
+        100% { fill: #EAB308; }
+      }
+      @keyframes slideCapacity {
+        0% { transform: translateX(0px); }
+        50% { transform: translateX(180px); }
+        100% { transform: translateX(320px); }
+      }
+      @keyframes fillCapacity {
+        0% { width: 80px; }
+        50% { width: 260px; }
+        100% { width: 400px; }
+      }
+    </style>
+  </defs>
+
+  <rect width="1200" height="320" rx="18" fill="#181A18" stroke="#3A3D39" stroke-width="2" />
+
+  <!-- Columna Izquierda: Simulación Animada de Pintura 3D por Zonas -->
+  <g transform="translate(36, 32)">
+    <rect width="540" height="256" rx="14" fill="#222522" stroke="#3A3D39" stroke-width="1.5" />
+    <text x="24" y="38" class="panel-title" font-size="20">
+      PINTURA 3D EN TIEMPO REAL (3 ZONAS INDEPENDIENTES)
+    </text>
+    <text x="24" y="62" class="panel-sub" font-size="13">
+      Cuerpo General + Detalles / Gráficas + Llantas / Discos
+    </text>
+
+    <!-- Silueta Técnica de Tolva Kisser que cambia de color con CSS -->
+    <g transform="translate(45, 78)">
+      <!-- Tolva Cuerpo Piramidal -->
+      <polygon points="20,10 310,10 310,42 260,96 70,96 20,42" class="color-cycle-body" stroke="#F3F1EA" stroke-width="2" />
+      <!-- Sinfín Delantero -->
+      <line x1="275" y1="92" x2="325" y2="2" stroke="#F3F1EA" stroke-width="12" stroke-linecap="round" />
+      <!-- Gráfica Lateral -->
+      <rect x="42" y="20" width="245" height="12" rx="3" fill="#DF9F14" />
+      <!-- Lanza delantera -->
+      <line x1="270" y1="104" x2="355" y2="120" stroke="#CEC9BC" stroke-width="6" stroke-linecap="round" />
+      <!-- Ruedas Agrícolas -->
+      <circle cx="85" cy="112" r="28" fill="#141614" stroke="#3A3D39" stroke-width="4" />
+      <circle cx="85" cy="112" r="15" class="color-cycle-rim" />
+      <circle cx="245" cy="112" r="28" fill="#141614" stroke="#3A3D39" stroke-width="4" />
+      <circle cx="245" cy="112" r="15" class="color-cycle-rim" />
+    </g>
+
+    <!-- Muestras RAL Oficiales -->
+    <g transform="translate(430, 82)">
+      <rect x="0" y="0" width="86" height="28" rx="6" fill="#1B6B2F" stroke="#F3F1EA" stroke-width="1.5" />
+      <text x="43" y="18" text-anchor="middle" class="mono" font-size="11" fill="#FFFFFF">RAL 6002</text>
+
+      <rect x="0" y="36" width="86" height="28" rx="6" fill="#B81D24" stroke="#F3F1EA" stroke-width="1.5" />
+      <text x="43" y="54" text-anchor="middle" class="mono" font-size="11" fill="#FFFFFF">RAL 3020</text>
+
+      <rect x="0" y="72" width="86" height="28" rx="6" fill="#EAB308" stroke="#181A18" stroke-width="1.5" />
+      <text x="43" y="90" text-anchor="middle" class="mono" font-size="11" fill="#181A18">RAL 1023</text>
+
+      <rect x="0" y="108" width="86" height="28" rx="6" fill="#1E5AA8" stroke="#F3F1EA" stroke-width="1.5" />
+      <text x="43" y="126" text-anchor="middle" class="mono" font-size="11" fill="#FFFFFF">RAL 5015</text>
+    </g>
+  </g>
+
+  <!-- Columna Derecha: Geometría Paramétrica Dinámica por Capacidad -->
+  <g transform="translate(612, 32)">
+    <rect width="552" height="256" rx="14" fill="#222522" stroke="#3A3D39" stroke-width="1.5" />
+    <text x="24" y="38" class="panel-title" font-size="20">
+      GEOMETRÍA PARAMÉTRICA SEGÚN CAPACIDAD
+    </text>
+    <text x="24" y="62" class="panel-sub" font-size="13">
+      El modelo 3D y sus calcos se adaptan en vivo al filtrar la medida
+    </text>
+
+    <!-- Deslizador Animado -->
+    <g transform="translate(24, 86)">
+      <rect x="0" y="12" width="490" height="12" rx="6" fill="#141614" stroke="#3A3D39" />
+      <rect x="0" y="12" width="240" height="12" rx="6" fill="#146B38" class="slider-fill" />
+      <g class="slider-thumb">
+        <circle cx="80" cy="18" r="13" fill="#DF9F14" stroke="#181A18" stroke-width="3" />
+      </g>
+    </g>
+
+    <!-- Grilla de Rangos Reales -->
+    <g transform="translate(24, 134)">
+      <rect x="0" y="0" width="242" height="46" rx="8" fill="#181A18" stroke="#3A3D39" />
+      <text x="14" y="20" class="panel-sub" font-size="12" fill="#DF9F14">TOLVAS AUTODESCARGABLES</text>
+      <text x="14" y="37" class="mono" font-size="13" fill="#F3F1EA">6 Ton. (T.6) → 30 Ton. (T.30)</text>
+
+      <rect x="256" y="0" width="248" height="46" rx="8" fill="#181A18" stroke="#3A3D39" />
+      <text x="270" y="20" class="panel-sub" font-size="12" fill="#DF9F14">JAULAS GANADERAS TÁNDEM</text>
+      <text x="270" y="37" class="mono" font-size="13" fill="#F3F1EA">4 Cabezas → 12 Cabezas</text>
+
+      <rect x="0" y="56" width="242" height="46" rx="8" fill="#181A18" stroke="#3A3D39" />
+      <text x="14" y="76" class="panel-sub" font-size="12" fill="#DF9F14">RASTRAS ROME TIJERA</text>
+      <text x="14" y="93" class="mono" font-size="13" fill="#F3F1EA">14 Discos → 28 Discos Dentados</text>
+
+      <rect x="256" y="56" width="248" height="46" rx="8" fill="#181A18" stroke="#3A3D39" />
+      <text x="270" y="76" class="panel-sub" font-size="12" fill="#DF9F14">TANQUES CISTERNA</text>
+      <text x="270" y="93" class="mono" font-size="13" fill="#F3F1EA">1.500 Lts. → 10.000 Lts.</text>
+    </g>
+  </g>
+</svg>
