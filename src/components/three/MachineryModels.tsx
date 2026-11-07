@@ -2052,9 +2052,6 @@ function RomeTijeraModel({
           depth={0.14}
           material={materials.bodyMat}
         />
-        <mesh position={[0, 0.06, -0.08]} castShadow material={materials.bodyMat}>
-          <cylinderGeometry args={[0.09, 0.09, 0.28, 20]} />
-        </mesh>
         <mesh
           position={[0, 0, -0.073]}
           rotation={[0, Math.PI, 0]}
